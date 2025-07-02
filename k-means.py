@@ -9,8 +9,6 @@ def calculate_mean(lis):
       col_sum += lis[i][j]
     mean_point.append(col_sum/len(lis))
   return mean_point
-#_____Test_____
-calculate_mean([[1, 2, 3], [1, 2, 4]])
 
 #A function that finds the euclidean distance between the given two points
 def euc_dis(a, b):
@@ -18,8 +16,6 @@ def euc_dis(a, b):
   for i in range(len(a)):
     square_sum += (a[i]-b[i])*(a[i]-b[i])
   return square_sum**(1/2)
-#_____Test_____
-euc_dis([1, 2, 3], [0, 0, 0])
 
 def combinations(n, k):
     if k == 0:
@@ -35,13 +31,6 @@ def combinations(n, k):
         for sub_comb in sub_combinations:
             result.append([i] + [x + i + 1 for x in sub_comb])
     return result
-#_____Test_____
-# Example usage:
-n = 5  # Total number of points
-k = 2  # Number of points to pick
-
-all_combinations = combinations(n, k)
-print(all_combinations)  # To see the output, run the code.
 
 #making the cluster groups and their centroids in a different list
 def create_k_cluster(k):
